@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:16.13.1-alpine
 
 # Create app directory
 WORKDIR /app
@@ -7,10 +7,10 @@ WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
 
-RUN npm install --only=production
-
+# hadolint ignore=DL3018
+RUN npm install --only=production && \
 # Installs latest Chromium package.
-RUN apk add --no-cache \
+      apk add --no-cache \
       chromium \
       nss \
       freetype \

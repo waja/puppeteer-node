@@ -1,6 +1,6 @@
-# Sample Puppeteer Node Docker (TMT)
+# Sample Puppeteer Node.js Docker (TMT)
 
-Use Puppeteer inside a Docker container with Node LTS alpine as a base image.
+Use Puppeteer inside a Docker container with Node.js LTS alpine as a base image.
 
 ## Docker
 
